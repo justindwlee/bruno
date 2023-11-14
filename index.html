@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Audi Type";
+      src: url("./font/Audi_Type_Office_v4.033/PostScript/AudiType-ExtendedBold_4.03.otf")
+        format("woff2");
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: black;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    #title {
+      font-family: Audi Type;
+      font-size: 2vw;
+      font-weight: 700;
+      color: white;
+      position: absolute;
+      top: 8vh;
+      left: 60px;
+    }
+
+    #mode {
+      font-size: 0.7vw;
+      color: #8d8d8d;
+    }
+
+    #line {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 4px;
+      background-color: #8f8f8f;
+    }
+
+    #hover {
+      border-radius: 379px;
+      height: 129px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #8a8a8a 0%,
+        rgba(109, 109, 109, 0) 100%
+      );
+      position: absolute;
+      top: -95%;
+      width: 0px;
+    }
+
+    #btn {
+      height: 100%;
+      width: 23%;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      font-family: Audi Type;
+      font-size: 1.2vw;
+      font-weight: 700;
+      color: #8d8d8d;
+      justify-content: flex-start;
+      text-align: start;
+      padding-top: 0.5vh;
+    }
+
+    #textArea {
+      position: absolute;
+      bottom: 2vh;
+      left: 0px;
+    }
+
+    #buttonArea {
+      width: calc(100% - 120px);
+      height: 10vh;
+      position: absolute;
+      bottom: 3vh;
+      padding: 0px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      left: 0px;
+      right: 0px;
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > button:hover {
+        color: white;
+        #hover {
+          width: 100%;
+        }
+        #line {
+          background-color: white;
+        }
+        cursor: pointer;
+      }
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+
+    #videoImg {
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      bottom: 1vh;
+      right: 24px;
+    }
+
+    #audi {
+      position: absolute;
+      top: 4vh;
+      left: 60px;
+      width: 5%;
+      aspect-ratio: 74/26;
+    }
+
+    #logo {
+      position: absolute;
+      top: 4vh;
+      right: 60px;
+      width: 7%;
+      aspect-ratio: 1/1;
+    }
+
+    #subTitle {
+      font-family: Audi Type;
+      color: #4f4f4f;
+      font-size: 1.2vw;
+      font-weight: 700px;
+      position: absolute;
+      bottom: 20vh;
+      left: 60px;
+    }
+  </style>
+  <body>
+    <div id="title">Lifestyle mode<br />Prototype</div>
+    <img src="./img/Audi Rings.png" id="audi" />
+    <img src="./img/logo.png" id="logo" />
+
+    <div id="subTitle">Choose the prototype <br />you want play</div>
+
+    <video
+      id="video"
+      style="margin: 0 auto; overflow: hidden"
+      loop
+      autoplay="autoplay"
+      muted
+    >
+      <source src="./source/main.mp4" type="video/mp4" />
+    </video>
+
+    <audio autoplay="autoplay" loop>
+      <source src="source/background.mp3" />
+    </audio>
+
+    <div id="buttonArea">
+      <button onclick="window.location.href = 'standard.html'" id="btn">
+        <div id="line"></div>
+        <div id="hover"></div>
+
+        <div id="textArea">
+          <div>Standard</div>
+          <div id="mode">mode</div>
+        </div>
+
+        <img src="./img/video.png" id="videoImg" />
+      </button>
+
+      <button onclick="window.location.href = 'task.html'" id="btn">
+        <div id="line"></div>
+        <div id="hover"></div>
+
+        <div id="textArea">
+          <div>Task</div>
+          <div id="mode">mode</div>
+        </div>
+
+        <img src="./img/video.png" id="videoImg" />
+      </button>
+
+      <button onclick="window.location.href = 'joyful.html'" id="btn">
+        <div id="line"></div>
+        <div id="hover"></div>
+
+        <div id="textArea">
+          <div>Joyful</div>
+          <div id="mode">mode</div>
+        </div>
+
+        <img src="./img/video.png" id="videoImg" />
+      </button>
+
+      <button onclick="window.location.href = 'chill.html'" id="btn">
+        <div id="line"></div>
+        <div id="hover"></div>
+
+        <div id="textArea">
+          <div>Chill</div>
+          <div id="mode">mode</div>
+        </div>
+
+        <img src="./img/video.png" id="videoImg" />
+      </button>
+    </div>
+  </body>
+
+  <script></script>
+</html>
